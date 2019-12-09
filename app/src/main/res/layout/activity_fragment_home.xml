@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="45dp"
+            android:text="Input Produk"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editKodeProduk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="14sp"
+            android:paddingTop="14dp"
+            android:textSize="14sp"
+            android:maxLength="7"
+            android:inputType="number"
+            android:hint="Kode Produk"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/editNamaProduk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Nama Pelanggan"
+            android:inputType="text"
+            android:paddingTop="14dp"
+            android:paddingBottom="14sp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/editHargaPokok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="14sp"
+            android:paddingTop="14dp"
+            android:textSize="14sp"
+            android:maxLength="7"
+            android:hint="Harga Pokok"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/editHargaJual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="14sp"
+            android:paddingTop="14dp"
+            android:textSize="14sp"
+            android:maxLength="7"
+            android:hint="Harga Jual"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/editStokProduk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Berat Cucian"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingTop="14dp"
+            android:paddingBottom="14sp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+            <Button
+                android:id="@+id/btnBersihkan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Kosongkan"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:padding="16dp"/>
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Simpan"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:padding="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

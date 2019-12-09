@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Assesment 2 Natasha</string>
+    <string name="facebook_app_id">1754448734685361</string>
+
+    <string name="home">Tambah Data</string>
+    <string name="search">Menu</string>
+    <string name="kami">Tentang Kami</string>
+    <string name="logout">Logout</string>
+
+    <string name="open_navigation">Open Navigation</string>
+    <string name="close_navigation">Close Navigation</string>
+</resources>
