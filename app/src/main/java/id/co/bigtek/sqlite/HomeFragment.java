@@ -1,5 +1,6 @@
 package id.co.bigtek.sqlite;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +42,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             public void onClick(View view) {
                 //menjalankan method prosesSimpan()
                 prosesSimpan();
+
             }
         });
 
@@ -77,6 +79,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 )){
                     //beritahukan jika input berhasil dengan TOASTER
                     Toast.makeText(getContext(), "Data berhasil ditambahkan.", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(getContext(), HomeActivity.class);
+                    startActivity(i);
                 }
             }
         }

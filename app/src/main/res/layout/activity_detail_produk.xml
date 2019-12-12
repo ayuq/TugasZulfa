@@ -35,24 +35,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="false"
-            android:hint="Kode Produk"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="Kode Buku"
             android:inputType="number"
             android:maxLength="7"
-            android:paddingTop="14dp"
             android:paddingBottom="14sp"
-            android:textSize="14sp"
-            android:editable="false"
-            android:focusable="false"/>
+            android:paddingTop="14dp"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/detailNamaProduk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Nama Produk"
+            android:hint="Nama Peminjam"
             android:inputType="text"
-            android:paddingTop="14dp"
             android:paddingBottom="14sp"
+            android:paddingTop="14dp"
             android:singleLine="true"
             android:textSize="14sp" />
 
@@ -61,11 +61,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Harga Pokok"
+            android:hint="NIM"
             android:inputType="number"
             android:maxLength="7"
-            android:paddingTop="14dp"
             android:paddingBottom="14sp"
+            android:paddingTop="14dp"
             android:singleLine="true"
             android:textSize="14sp" />
 
@@ -74,11 +74,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Harga Jual"
+            android:hint="Jumlah Buku"
             android:inputType="number"
             android:maxLength="7"
-            android:paddingTop="14dp"
             android:paddingBottom="14sp"
+            android:paddingTop="14dp"
             android:singleLine="true"
             android:textSize="14sp" />
 
@@ -87,11 +87,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Stok Produk"
+            android:hint="Tanggal Pinjam"
             android:inputType="number"
             android:maxLength="6"
-            android:paddingTop="14dp"
             android:paddingBottom="14sp"
+            android:paddingTop="14dp"
             android:singleLine="true"
             android:textSize="14sp" />
 

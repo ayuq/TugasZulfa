@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:layout_marginTop="45dp"
-            android:text="Input Produk"
+            android:text="Pinjam Buku"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 
@@ -34,7 +34,7 @@
             android:textSize="14sp"
             android:maxLength="7"
             android:inputType="number"
-            android:hint="Kode Produk"
+            android:hint="Kode Buku"
             android:layout_marginTop="8dp"/>
 
         <EditText
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Nama Pelanggan"
+            android:hint="Nama Peminjam"
             android:inputType="text"
             android:paddingTop="14dp"
             android:paddingBottom="14sp"
@@ -55,8 +55,8 @@
             android:paddingBottom="14sp"
             android:paddingTop="14dp"
             android:textSize="14sp"
-            android:maxLength="7"
-            android:hint="Harga Pokok"
+            android:maxLength="9"
+            android:hint="NIM"
             android:layout_marginTop="8dp"
             android:singleLine="true"
             android:inputType="number"/>
@@ -67,8 +67,7 @@
             android:paddingBottom="14sp"
             android:paddingTop="14dp"
             android:textSize="14sp"
-            android:maxLength="7"
-            android:hint="Harga Jual"
+            android:hint="Jumlah Buku"
             android:layout_marginTop="8dp"
             android:singleLine="true"
             android:inputType="number"/>
@@ -78,9 +77,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Berat Cucian"
-            android:inputType="number"
-            android:maxLength="6"
+            android:hint="Tanggal Pinjam"
+            android:inputType="date"
             android:paddingTop="14dp"
             android:paddingBottom="14sp"
             android:singleLine="true"

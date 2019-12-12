@@ -34,8 +34,7 @@ public class AdapterProduk extends RecyclerView.Adapter<AdapterProduk.ViewHolder
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         //untuk menampilkan data produk pada content_list_produk.xml
         holder.namaProduk.setText(produk.get(position).getNama_produk());
-        holder.stokProduk.setText(produk.get(position).getStok()+" kg");
-        holder.hargaJual.setText("Rp "+produk.get(position).getHarga_jual());
+        holder.stokProduk.setText(produk.get(position).getHarga_jual()+" buku");
 
         //fungsi saat mengklik item list
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +66,6 @@ public class AdapterProduk extends RecyclerView.Adapter<AdapterProduk.ViewHolder
             super(itemView);
             namaProduk = itemView.findViewById(R.id.txtNamaProduk);
             stokProduk = itemView.findViewById(R.id.txtStokProduk);
-            hargaJual = itemView.findViewById(R.id.txtHargaJual);
         }
     }
 }

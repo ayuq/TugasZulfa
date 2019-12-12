@@ -11,22 +11,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ListFragment"></activity>
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".ListFragment" />
+        <activity android:name=".HomeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SplashActivity">
+
+        </activity>
         <activity
             android:name=".Activity_DetailProduk"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity_ListProduk"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
@@ -35,5 +40,10 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
     </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

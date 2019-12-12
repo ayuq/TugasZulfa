@@ -2,12 +2,14 @@ package id.co.bigtek.sqlite;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class Activity_DetailProduk extends AppCompatActivity {
     private DBHelper db;
@@ -29,7 +31,31 @@ public class Activity_DetailProduk extends AppCompatActivity {
         inisialisasi();
         load_function();
         tampilkan_data();
+
+        // toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // add back arrow to toolbar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
     }
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            //membuka halaman awal setelah query di proses
+            startActivity(new Intent(Activity_DetailProduk.this,HomeActivity.class));
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
     private void tampilkan_data() {
         //mendapatkan data kode_produk yang dikirimkan
@@ -56,7 +82,7 @@ public class Activity_DetailProduk extends AppCompatActivity {
                 String query = "DELETE FROM produk WHERE kode_produk = "+editKodeProduk.getText();
                 db.customQuery(query);
                 //membuka halaman awal setelah query di proses
-                startActivity(new Intent(Activity_DetailProduk.this,MainActivity.class));
+                startActivity(new Intent(Activity_DetailProduk.this,HomeActivity.class));
             }
         });
 
@@ -89,6 +115,8 @@ public class Activity_DetailProduk extends AppCompatActivity {
 
             db.customQuery(query);
             Toast.makeText(Activity_DetailProduk.this,"Data berhasil diubah.",Toast.LENGTH_SHORT).show();
+            //membuka halaman awal setelah query di proses
+            startActivity(new Intent(Activity_DetailProduk.this,HomeActivity.class));
         }
     }
 

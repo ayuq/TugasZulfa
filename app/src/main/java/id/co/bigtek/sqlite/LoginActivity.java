@@ -125,7 +125,7 @@ public class LoginActivity extends AppCompatActivity {
                 String usernameKey = username.getText().toString();
                 String passwordKey = password.getText().toString();
 
-                if (usernameKey.equals("admin") && passwordKey.equals("123")){
+                if (usernameKey.equals("zulfa") && passwordKey.equals("123")){
                     //jika login berhasil
                     Toast.makeText(getApplicationContext(), "LOGIN SUKSES",
                             Toast.LENGTH_SHORT).show();

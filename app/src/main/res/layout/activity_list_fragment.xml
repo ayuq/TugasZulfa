@@ -25,21 +25,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Laundry kiloan"
+            android:text="Aplikasi Peminjaman Buku"
             android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="adalah jasa pencucian pakaian kotor sampai dengan kering dan siap pakai, dalam arti pakaian yang semula dibawa ke jasa binatu/laundry dalam keadaan kotor dan saat diterima kembali oleh konsumen pemakai jasa laundry pakaian tersebut sudah siap digunakan kembali(sudah bersih, dalam keadaan rapi dan telah disetrika), yang mana penentuan tarifnya adalah berdasarkan jumlah kilogram baju yang dilaundry. Akan tetapi dalam praktiknya jasa yang ditawarkan kemudian berkembang menjadi jasa cuci basah, cuci kering, cuci s/d setrika  dan setrika saja."
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Usaha  laundry kiloan(bisnis laundry kiloan) makin menjamur, mulai dari laundry yang eksklusif sampai dengan laundry kiloan sangat banyak ditemukan dan memiliki pelanggan masing-masing. Bahkan di pedesaan-pun kini orang tidak lagi asing dengan jasa yang satu ini dengan  banyaknya terdapat usaha jasa laundry karena minat konsumen yang cukup tinggi juga manfaat yang dirasakan terhadap jasa tersebut dan terlebih lagi usaha laundry murah tersebut sangat terjangkau harganya. Peluang inilah yang kemudian ditangkap oleh Kinaya’s clean untuk memanfaatkan potensi pasar yang ada menjadi peluang bisnis yang sangat menjanjikan. "
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="Pengelola peminjaman buku perpustakaan, sangat mudah digunakan untuk para peminjam buku. Tidak perlu datang ke perpustakaan untuk meminjam buku. Cukup dengan download aplikasi ini dan mulai untuk meminjam"
             android:textAlignment="center" />
 
     </com.google.android.material.appbar.AppBarLayout>

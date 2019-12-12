@@ -7,10 +7,6 @@
         android:icon="@drawable/upload"/>
 
     <item
-        android:id="@+id/search_menu"
-        android:title="@string/search"
-        android:icon="@drawable/home"/>
-    <item
         android:id="@+id/tentang_kami"
         android:title="@string/kami"
         android:icon="@drawable/kami"/>

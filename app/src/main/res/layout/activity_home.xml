@@ -17,23 +17,32 @@
         android:orientation="vertical">
 
         <TextView
-            android:text="MENU"
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:id="@+id/textView"
+            android:gravity="top"
+            android:text="MENU"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="normal|bold" />
 
         <Button
-            android:text="Data Laudry"
+            android:id="@+id/btnList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:id="@+id/btnInput" />
+            android:text="LIST PEMINJAM BUKU" />
+
+        <Button
+            android:id="@+id/btnInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:text="PINJAM BUKU" />
 
 
         <Button

@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button btnExit, btnInput, btnLihatData;
+    Button btnExit, btnInput, btnList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class HomeActivity extends AppCompatActivity {
 
         btnExit = findViewById(R.id.btnExit);
         btnInput = findViewById(R.id.btnInput);
+        btnList = findViewById(R.id.btnList);
 
         btnInput.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +27,14 @@ public class HomeActivity extends AppCompatActivity {
                 //perintah untuk masuk ke Input Activity
                 Intent intent = new Intent(HomeActivity.this, MainActivity.class);
                 HomeActivity.this.startActivity(intent);
+            }
+        });
+        btnList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(HomeActivity.this, Activity_ListProduk.class);
+                startActivity(i);
+                finish();
             }
         });
 

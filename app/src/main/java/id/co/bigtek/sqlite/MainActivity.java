@@ -2,7 +2,6 @@ package id.co.bigtek.sqlite;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -43,43 +42,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private EditText editHargaJual;
     private EditText editStok;
     private EditText editKodeProduk;
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id =item.getItemId();
-        if(id == R.id.home_menu){
-            Intent i = new Intent(MainActivity.this, HomeFragment.class);
-            startActivity(i);
-            finish();
-        }
-        if(id == R.id.tentang_kami){
-            Intent i = new Intent(MainActivity.this, ListFragment.class);
-            startActivity(i);
-            finish();
-        }
-        if(id == R.id.logout_menu){
-            mGoogleSignInClient.signOut();
-            FacebookSdk.sdkInitialize(getApplicationContext());
-            LoginManager.getInstance().logOut();
-            AccessToken.setCurrentAccessToken(null);
-            Intent i = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(i);
-            finish();
-        }
-        if(id == R.id.search_menu){
-            Intent i = new Intent(MainActivity.this, HomeActivity.class);
-            startActivity(i);
-            finish();
-
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.bottomnaviagtion_menu, menu);
-        return true;
-    }
+    
 
     @Override
     public void onBackPressed() {
@@ -186,6 +149,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 )){
                     //beritahukan jika input berhasil dengan TOASTER
                     Toast.makeText(MainActivity.this,"Data berhasil ditambahkan.",Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(MainActivity.this, HomeActivity.class);
+                    startActivity(i);
                 }
             }
         }
@@ -214,10 +179,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 case R.id.tentang_kami:
                     fragment = new ListFragment();
                     break;
-                case R.id.search_menu:
-                    Intent i = new Intent(MainActivity.this, HomeActivity.class);
-                    startActivity(i);
-                    finish();
                 case R.id.logout_menu:
                     mGoogleSignInClient.signOut();
                     FacebookSdk.sdkInitialize(getApplicationContext());

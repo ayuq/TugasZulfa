@@ -18,19 +18,6 @@ public class DBHelper extends SQLiteOpenHelper {
             "harga_jual REAL," +
             "stok INTEGER)";
 
-    private String BUAT_TABEL_TRANSAKSI = "CREATE TABLE IF NOT EXISTS transaksi (" +
-            "kode_transaksi INTEGER PRIMARY KEY," +
-            "tanggal TEXT," +
-            "total REAL," +
-            "bayar REAL," +
-            "kembalian REAL)";
-
-    private String BUAT_TABEL_DETAIL_TRANSAKSI = "CREATE TABLE IF NOT EXISTS detail_transaksi (" +
-            "kode_detail INTEGER PRIMARY KEY," +
-            "kode_transaksi INTEGER," +
-            "kode_produk INTEGER," +
-            "qty INTEGER)";
-
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -38,8 +25,6 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(BUAT_TABEL_PRODUK);
-        db.execSQL(BUAT_TABEL_TRANSAKSI);
-        db.execSQL(BUAT_TABEL_DETAIL_TRANSAKSI);
     }
 
     @Override
@@ -68,31 +53,5 @@ public class DBHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    Boolean insertTransaksi(int kode_transaksi,
-                                 String tanggal,
-                                 Double total,
-                                 Double bayar,
-                                 Double kembalian){
-        ContentValues values = new ContentValues();
-        values.put("kode_transaksi",kode_transaksi);
-        values.put("tanggal",tanggal);
-        values.put("total",total);
-        values.put("bayar",bayar);
-        values.put("kembalian",kembalian);
-        getWritableDatabase().insert("transaksi",null,values);
-        return true;
-    }
 
-    Boolean insertDetailTransaksi(int kode_detail,
-                                    int kode_transaksi,
-                                    int kode_produk,
-                                    int qty){
-        ContentValues values = new ContentValues();
-        values.put("kode_transaksi",kode_transaksi);
-        values.put("kode_detail",kode_detail);
-        values.put("kode_produk",kode_produk);
-        values.put("qty",qty);
-        getWritableDatabase().insert("detail_transaksi",null,values);
-        return true;
-    }
 }

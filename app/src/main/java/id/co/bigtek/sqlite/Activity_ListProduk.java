@@ -1,13 +1,16 @@
 package id.co.bigtek.sqlite;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class Activity_ListProduk extends AppCompatActivity {
     private DBHelper db;
@@ -15,17 +18,40 @@ public class Activity_ListProduk extends AppCompatActivity {
     private RecyclerView listProduk;
     private ArrayList<model_produk> produk;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_produk);
         db = new DBHelper(this);
-
         inisialisasi();
         load_fungsi();
         load_data();
+
+        // toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // add back arrow to toolbar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
     }
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            //membuka halaman awal setelah query di proses
+            startActivity(new Intent(Activity_ListProduk.this,HomeActivity.class));
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
 
     private void load_data() {
         //mempersiapkan list
@@ -59,6 +85,7 @@ public class Activity_ListProduk extends AppCompatActivity {
     }
 
     private void inisialisasi() {
+
         listProduk = findViewById(R.id.listProduk);
     }
 
