@@ -11,27 +11,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ListFragment" />
-        <activity android:name=".HomeActivity" >
+        <activity android:name=".Essay1Activity"></activity>
+        <activity android:name=".SelfActivity" />
+        <activity android:name=".LiteraturActivity" />
+        <activity android:name=".CinemaActivity" />
+        <activity android:name=".EssayActivity" />
+        <activity android:name=".bio" />
+        <activity android:name=".HomeActivity">
+
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SplashActivity">
-
-        </activity>
         <activity
             android:name=".Activity_DetailProduk"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity_ListProduk"
-            android:screenOrientation="portrait" >
-
-
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait" />

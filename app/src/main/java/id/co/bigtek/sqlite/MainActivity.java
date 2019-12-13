@@ -179,6 +179,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 case R.id.tentang_kami:
                     fragment = new ListFragment();
                     break;
+                case R.id.katalog:
+                    fragment = new Katalog();
+                    break;
                 case R.id.logout_menu:
                     mGoogleSignInClient.signOut();
                     FacebookSdk.sdkInitialize(getApplicationContext());

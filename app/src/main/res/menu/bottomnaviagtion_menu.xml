@@ -11,6 +11,11 @@
         android:title="@string/kami"
         android:icon="@drawable/kami"/>
     <item
+        android:id="@+id/katalog"
+        android:title="Katalog Buku"
+        android:icon="@drawable/open"/>
+
+    <item
         android:id="@+id/logout_menu"
         android:title="@string/logout"
         android:icon="@drawable/logout"/>

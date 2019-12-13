@@ -17,6 +17,22 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:fontFamily="cursive"
+            android:text="Welcome Peminjam!"
+            android:textAlignment="center"
+            android:textColor="#009688"
+            android:textSize="36sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="186dp"
+            app:srcCompat="@drawable/bc" />
+
+        <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,6 +41,7 @@
             android:gravity="top"
             android:text="MENU"
             android:textAlignment="center"
+            android:textColor="#009688"
             android:textSize="30sp"
             android:textStyle="normal|bold" />
 
@@ -34,7 +51,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:text="LIST PEMINJAM BUKU" />
+            android:text="LIST PEMINJAM BUKU"
+            android:textColor="#2FA89D"
+            android:textColorHighlight="#299BAA" />
 
         <Button
             android:id="@+id/btnInput"
@@ -42,16 +61,20 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:text="PINJAM BUKU" />
+            android:text="PINJAM BUKU"
+            android:textColor="#2FA89D"
+            android:textColorHighlight="#2FA89D" />
 
 
         <Button
-            android:text="Kembali"
+            android:id="@+id/btnExit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:id="@+id/btnExit" />
+            android:text="Logout"
+            android:textColor="#2FA89D"
+            android:textColorHighlight="#009688" />
 
     </LinearLayout>
 </ScrollView>

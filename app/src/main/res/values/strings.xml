@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">Assesment 2 Zulfa</string>
+    <string name="app_name">Peminjaman Buku</string>
     <string name="facebook_app_id">500369623911351</string>
 
     <string name="home">Pinjam Buku</string>
     <string name="search">Menu</string>
     <string name="kami">Tentang Kami</string>
+    <string name="katalog">Katalog Buku</string>
     <string name="logout">Logout</string>
 
     <string name="open_navigation">Open Navigation</string>
